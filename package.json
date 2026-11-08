@@ -1,0 +1,11 @@
+{
+  "name": "better-auth-rate-limit-window-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "repro": "node repro.mjs"
+  },
+  "dependencies": {
+    "better-auth": "1.7.18"
+  }
+}
