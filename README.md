@@ -2,7 +2,7 @@
 
 With the default rate limit (`max: 100` per `window: 10` seconds), a client sending one request every 5 seconds (2 per window, far under the limit) gets a 429 on its 101st request, about 8 minutes in, and again every 101 requests after that. Both the `memory` and `database` storages do it. The count only resets once `window` seconds pass since the last *accepted* request, and every accepted request moves that timestamp forward, so `max` behaves like "requests in a row without a `window`-long pause" rather than "requests per `window`".
 
-Reported in better-auth/better-auth#11660 (this repo adds the database storage, the default limit and the latest stable and beta versions).
+Reported in https://github.com/better-auth/better-auth/issues/11660. This repo adds the database storage, the default limit and the latest stable and beta versions there: https://github.com/better-auth/better-auth/issues/11660#issuecomment-6722944224
 
 ## Reproduction
 
